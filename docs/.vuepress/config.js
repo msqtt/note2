@@ -19,7 +19,7 @@ export default defineUserConfig({
       "link",
       {
         rel: "stylesheet",
-        href: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css",
       },
     ],
   ],
