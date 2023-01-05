@@ -8,6 +8,7 @@ import { sidebar } from "./configs/sidebar";
 export default defineUserConfig({
   lang: "zh-CN",
   title: "📖Mosquito's Note📖",
+  base: "/note2/",
   description: "是水属性的答辩",
   head: [
     [
@@ -23,7 +24,6 @@ export default defineUserConfig({
     ],
   ],
   theme: defaultTheme({
-    base: "/note2/",
     repo: "msqtt/note2",
     repoLabel: "Repo",
     docsBranch: "master",
