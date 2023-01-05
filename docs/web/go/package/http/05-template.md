@@ -370,3 +370,171 @@ func process(w http.ResponseWriter, r *http.Request) {
 ### 定义类
 
 define action
+
+## 函数与管道
+
+### 参数(argument)
+
+参数就是模板里面用到的值
+
+- 可以是 bool 整数、string
+- 也可以是 struct、struct 的字段、数组的 key 等等
+
+参数可以是变量、方法(返回单个值或返回一个值和一个错误)或函数
+
+参数可以是一个 `.`, 就是传入模板引擎的哪个值
+
+### 在 Action 中设置变量
+
+可以在 action 中设置变量，变量以`$` 开头: - `$variable := value`
+
+一个迭代 action 的例子:
+
+```go
+{{ range $key, $value := . }}
+The key is {{ $key }} and the value is {{ $value }}
+{{ end }}
+```
+
+### 管道(pipeline)
+
+管道是按顺序连接到一起的参数、函数和方法 - 与 Unix 的管道类似
+
+管道允许把参数的输出发给下一个参数，下一个参数由`|`分隔开
+
+```go
+{{ 12.3456 | printf "%.2f" }}
+```
+
+### 函数
+
+参数可以是函数
+
+Go 模板引擎提供了一些内置函数，功能比较有限。例如 `fmt.Sprint` 的各类变体等
+
+开发者可以定义函数： - 可以接收任意数量的输入参数
+
+- 返回
+  - 一个值
+  - 一个值和一个错误
+
+#### 内置函数
+
+- define、template、block
+- html、js、urlquery 对字符串进行转义，防止安全问题
+
+  - 如果是 Web 模板，那么不会需要经常使用这些函数
+
+- index
+
+- print/printf/println
+
+- len
+
+- with
+
+#### 自定义函数
+
+- `template.Funcs(funcMap FuncMap) *Template`
+
+- `type FuncMap map[string]interface{}`
+  - value 是函数
+    - 可以有任意数量的参数
+    - 返回单个值的函数或返回一个值+一个错误的函数
+
+步骤：
+
+1. 创建一个 FuncMap (map 类型)
+
+   - key 是函数
+   - value 就是函数
+
+2. 把 FuncMap 附加到模板
+
+常见用法：`template.New("").Funcs(funcMap).Parse(...)`
+
+::: tip
+调用方法的顺序不能错误
+:::
+
+```go
+func process(w http.ResponseWriter, r *http.Request) {
+    funcMap := template.FuncMap{"fdate": formatDate}
+    t := template.New("t1.html").Funcs(funcMap)
+    t.ParseFiles("t1.html")
+    t.Execute(w, time.Now())
+}
+
+func formatDate(t time.Time) string {
+    layout := "2006-01-02"
+    return t.Format(layout)
+}
+```
+
+### 组合模板
+
+Layout 模板是网页中固定的部分，它可以被多个网页重复使用
+
+#### 制作 layout 模板
+
+Include (包含) action 的形式：`{{ template "name" .}}`
+只以这种方式做 layout 模板是不可行的
+正确的做法是在模板文件里面使用 define action 再定义一个模板
+
+也可以在多个模板文件中，定义同名的模板
+
+```go
+// layout.html
+{{ define "layout" }}
+...
+<Nav/>
+{{ template "content" . }}
+<Footer/>
+...
+{{ end }}
+
+// home.html
+{{ define "content" }}
+<h1>Here is home and {{ . }}</h1>
+{{ end }}
+
+// about.html
+{{ define "content" }}
+<h1>Here is about and {{ . }}</h1>
+{{ end }}
+
+
+// main.go
+func main() {
+    http.HandlerFunc("/home", func(w http.ResponseWriter, r *http.Request) {
+        t, _ := template.ParseFiles("layout.html", "home.html")
+        t.ExecuteTemplate(w, "layout", "Hello World")
+    })
+    http.HandlerFunc("/about", func(w http.ResponseWriter, r *http.Request) {
+        t, _ := template.ParseFiles("layout.html", "about.html")
+        t.ExecuteTemplate(w, "layout", "Hello")
+    })
+    http.ListenAndServe(":8080", nil)
+}
+```
+
+#### 使用 block action 定义默认模板
+
+```go
+{{ block arg }}
+Dot is set to arg
+{{ end }}
+```
+
+- block action: 可以定义模板，并同时就使用它
+- template: 模板必须使用, 不存在 Execute 时会返回错误
+- block: 模板可以不存在，不存在则显示内容
+
+## 逻辑运算符
+
+- `eq/ne`，等或不等
+- `lt/gt`，小于或大于
+- `le/ge`，小等于或大等于
+- `and`，与
+- `or`，或
+- `not`，非

@@ -29,6 +29,12 @@ export const go = {
         "/web/go/package/http/03-request",
         "/web/go/package/http/04-response",
         "/web/go/package/http/05-template",
+        "/web/go/package/http/06-route",
+        "/web/go/package/http/07-json",
+        "/web/go/package/http/08-middleware",
+        "/web/go/package/http/09-context",
+        "/web/go/package/http/10-https",
+        "/web/go/package/http/11-test",
       ],
     },
 
