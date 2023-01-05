@@ -1,0 +1,106 @@
+export const java = {
+  "/web/java/": [
+    {
+      text: "JavaSE",
+      collapsible: true,
+      children: [
+        "/web/java/javase/01-基础",
+        "/web/java/javase/02-流程控制",
+        "/web/java/javase/03-数组",
+        "/web/java/javase/04-类和对象",
+        "/web/java/javase/05-接口和继承",
+        "/web/java/javase/06-其他",
+        "/web/java/javase/07-异常处理",
+        "/web/java/javase/08-IO",
+        "/web/java/javase/09-泛型",
+        "/web/java/javase/10-反射",
+        "/web/java/javase/11-注解",
+        "/web/java/javase/12-线程",
+        "/web/java/javase/13-Jvm",
+      ],
+    },
+    {
+      text: "JavaWeb",
+      collapsible: true,
+      children: [
+        "/web/java/javaweb/01-Servlet基础知识",
+        "/web/java/javaweb/02-http请求回应对象",
+        "/web/java/javaweb/03-Cookie对象",
+        "/web/java/javaweb/04-HttpSession对象",
+        "/web/java/javaweb/05-返回Json",
+        "/web/java/javaweb/06-文件的上传和下载",
+      ],
+    },
+    {
+      text: "Spring",
+      collapsible: true,
+      children: [
+        "/web/java/ssm/spring/01-Spring简介",
+        "/web/java/ssm/spring/02-IOC",
+        "/web/java/ssm/spring/03-AOP",
+      ],
+    },
+    {
+      text: "SpringMVC",
+      collapsible: true,
+      children: [
+        "/web/java/ssm/springmvc/01-SpringMVC简介",
+        "/web/java/ssm/springmvc/02-HelloWorld",
+        "/web/java/ssm/springmvc/03-RequestMapping",
+        "/web/java/ssm/springmvc/04-获取请求参数",
+        "/web/java/ssm/springmvc/05-域对象共享数据",
+        "/web/java/ssm/springmvc/06-SpringMVC视图",
+        "/web/java/ssm/springmvc/07-RESTFul",
+        "/web/java/ssm/springmvc/7.5-RESTFul案例",
+        "/web/java/ssm/springmvc/08-HttpMessageConverter",
+        "/web/java/ssm/springmvc/09-文件上传和下载",
+        "/web/java/ssm/springmvc/10-拦截器",
+        "/web/java/ssm/springmvc/11-异常处理器",
+        "/web/java/ssm/springmvc/12-注解配置SpringMVC",
+        "/web/java/ssm/springmvc/13-SpringMVC执行流程",
+      ],
+    },
+    {
+      text: "MyBatis",
+      collapsible: true,
+      children: [
+        "/web/java/ssm/mybatis/01-MyBatis",
+        "/web/java/ssm/mybatis/02-搭建MyBatis",
+        "/web/java/ssm/mybatis/03-核心配置文件",
+        "/web/java/ssm/mybatis/04-默认的类型别名",
+        "/web/java/ssm/mybatis/05-增删改查",
+        "/web/java/ssm/mybatis/06-获取参数值",
+        "/web/java/ssm/mybatis/07-各种查询功能",
+        "/web/java/ssm/mybatis/08-特殊的SQL的执行",
+        "/web/java/ssm/mybatis/09-resultMap",
+        "/web/java/ssm/mybatis/10-动态SQL",
+        "/web/java/ssm/mybatis/11-MyBatis的缓存",
+        "/web/java/ssm/mybatis/12-逆向工程",
+        "/web/java/ssm/mybatis/13-分页插件",
+      ],
+    },
+
+    {
+      text: "SpringBoot",
+      children: [
+        {
+          text: "基础入门",
+          collapsible: true,
+          children: [
+            "/web/java/springboot/基础入门/01-Spring与SpringBoot",
+            "/web/java/springboot/基础入门/02-SpringBoot2入门",
+            "/web/java/springboot/基础入门/03-自动配置原理",
+          ],
+        },
+        {
+          text: "核心功能",
+          collapsible: true,
+          children: [
+            "/web/java/springboot/核心功能/01-配置文件",
+            "/web/java/springboot/核心功能/02-web开发",
+          ],
+        },
+      ],
+    },
+  ],
+};
