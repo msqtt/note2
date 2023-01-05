@@ -23,8 +23,11 @@ export default defineUserConfig({
     ],
   ],
   theme: defaultTheme({
+    base: "/Note2/",
     repo: "msqt0/Note2",
     repoLabel: "Repo",
+    docsBranch: "master",
+    docsDir: "docs",
     editLink: true,
     editLinkText: "Edit ✍🏻️",
     lastUpdated: true,
