@@ -24,6 +24,7 @@ export const go = {
       collapsible: true,
       children: [
         "/web/go/package/01-编译",
+        "/web/go/package/02-module",
         "/web/go/package/http/01-web",
         "/web/go/package/http/02-handler",
         "/web/go/package/http/03-request",
