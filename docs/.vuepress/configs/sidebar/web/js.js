@@ -14,6 +14,7 @@ export const js = {
         "/web/js/09-类",
         "/web/js/10-事件",
         "/web/js/11-常用库",
+        "/web/js/12-异步",
         "/web/js/javascript一周目笔记",
       ],
     },
