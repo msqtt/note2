@@ -65,7 +65,7 @@ func (mgr *manager) AddUser(user *model.User) {
 
 > 使用实例化接口，因为只能使用实例化的 DB 操纵数据库
 
-## 测试
+## 测
 
 ```go
 package main

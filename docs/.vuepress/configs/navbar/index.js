@@ -16,6 +16,7 @@ export const navbar = [
     children: [
       { text: "Web部署", link: "/linux/web/" },
       { text: "Git", link: "/linux/git/" },
+      { text: "Lua", link: "/linux/lua/" },
     ],
   },
   {

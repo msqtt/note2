@@ -18,6 +18,16 @@ export const js = {
       ],
     },
     {
+      text: "TypeScript",
+      collapsible: true,
+      children: [
+        "/web/js/ts/01-what",
+        "/web/js/ts/02-base",
+        "/web/js/ts/03-advance",
+        "/web/js/ts/04-others",
+      ],
+    },
+    {
       text: "React",
       collapsible: true,
       children: [
