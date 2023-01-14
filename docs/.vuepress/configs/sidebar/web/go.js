@@ -36,6 +36,8 @@ export const go = {
         "/web/go/package/http/09-context",
         "/web/go/package/http/10-https",
         "/web/go/package/http/11-test",
+        "/web/go/package/db/01-connect",
+        "/web/go/package/db/02-CRUD",
       ],
     },
 
