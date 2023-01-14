@@ -28,6 +28,8 @@ type Company struct {
 }
 ```
 
+如果有不想序列化的字段，请使用`json:"-"`
+
 ### 类型映射
 
 - Go `bool`: JSON `boolean`
