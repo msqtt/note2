@@ -347,3 +347,18 @@ replace zinx v0.0.0-20200306023939-bc416543ae24 => zinx v0.0.0-20200221135252-8a
 ```
 
 这里出现了 replace 关键字.用于将一个模块版本替换为另外一个模块版本。
+
+## 常用指令
+
+废话好多，直接上指令吧
+
+- `go get example.org/pkg` 下载三方包
+  - `@update` 默认
+  - `@none` 删除依赖
+  - `@v1.1.2` tag 版本，语义版本
+  - `@23dfdd5` 特定的 commit
+  - `@branch` 分支最新 commit
+- `go mod` 包管理
+  - `init` 初始化，创建`go.mod`
+  - `download` 下载模块到本地缓存
+  - `tidy` 添加需要的模块依赖，删除不需要的模块依赖
