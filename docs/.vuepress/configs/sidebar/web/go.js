@@ -45,9 +45,11 @@ export const go = {
       text: "项目实现",
       collapsible: true,
       children: [
-        "/web/go/project/01-Gin项目架构",
-        "/web/go/project/02-Gin集成Gorm",
-        "/web/go/project/03-Gin实现控制和路由",
+        "/web/go/project/01-高质量编程",
+        "/web/go/project/02-性能优化",
+        "/web/go/project/example/01-Gin项目架构",
+        "/web/go/project/example/02-Gin集成Gorm",
+        "/web/go/project/example/03-Gin实现控制和路由",
       ],
     },
     {

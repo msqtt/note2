@@ -82,10 +82,10 @@ export const java = {
 
     {
       text: "SpringBoot",
+      collapsible: true,
       children: [
         {
           text: "基础入门",
-          collapsible: true,
           children: [
             "/web/java/springboot/基础入门/01-Spring与SpringBoot",
             "/web/java/springboot/基础入门/02-SpringBoot2入门",
@@ -94,7 +94,6 @@ export const java = {
         },
         {
           text: "核心功能",
-          collapsible: true,
           children: [
             "/web/java/springboot/核心功能/01-配置文件",
             "/web/java/springboot/核心功能/02-web开发",
