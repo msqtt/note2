@@ -1,5 +1,5 @@
 import { defineUserConfig, defaultTheme } from "vuepress";
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { searchPlugin } from "@vuepress/plugin-search";
 import markdownItKatex from "markdown-it-katex";
 
 import { navbar } from "./configs/navbar";
@@ -37,12 +37,8 @@ export default defineUserConfig({
     sidebar,
   }),
   plugins: [
-    docsearchPlugin({
-      appId: "C8LLPRL8BX",
-      apiKey: "f66c47310ce31c81bf3a4ec0c436c604",
-      algoliaOptions: {
-        facetFilters: ["tags:v1"],
-      },
+    searchPlugin({
+      // options
     }),
   ],
   extendsMarkdown: (md) => {
