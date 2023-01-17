@@ -36,7 +36,15 @@ export default defineUserConfig({
     navbar,
     sidebar,
   }),
-  plugins: [docsearchPlugin({})],
+  plugins: [
+    docsearchPlugin({
+      appId: "C8LLPRL8BX",
+      apiKey: "f66c47310ce31c81bf3a4ec0c436c604",
+      algoliaOptions: {
+        facetFilters: ["tags:v1"],
+      },
+    }),
+  ],
   extendsMarkdown: (md) => {
     md.use(markdownItKatex, { throwOnError: false, errorColor: "#cc0000" });
     md.linkify.set({ fuzzyEmail: false });
