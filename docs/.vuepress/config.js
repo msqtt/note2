@@ -1,5 +1,5 @@
 import { defineUserConfig, defaultTheme } from "vuepress";
-import { searchPlugin } from "@vuepress/plugin-search";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import markdownItKatex from "markdown-it-katex";
 
 import { navbar } from "./configs/navbar";
@@ -37,8 +37,11 @@ export default defineUserConfig({
     sidebar,
   }),
   plugins: [
-    searchPlugin({
+    docsearchPlugin({
       // options
+      appId: "V4PSR7HVGX",
+      apiKey: "4d32de92f6e9ca04b7d3eea1fda16756",
+      indexName: "2",
     }),
   ],
   extendsMarkdown: (md) => {
