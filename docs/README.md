@@ -15,7 +15,7 @@ features:
   - title: Cs 🔬
     details: 这里应该放的是一些基础的计算机学科知识
   - title: Others 🕊️
-    details: 剩下乱七八糟的东西，我会尽力整理的吧
+    details: 剩下乱七八糟的东西
   - title: VuePress2 ⚡️
     details: 博客使用 VuePress2 搭建的，快!
 footer: 'No Licensed | Copyright © 2022-present <a style="display: text-decoration: none; color: rgb(78, 110, 142);" href="https://github.com/msqtt">mosquito</a> (some)'
