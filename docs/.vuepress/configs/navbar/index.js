@@ -21,7 +21,10 @@ export const navbar = [
   },
   {
     text: "Cs",
-    children: [{ text: "数据库理论", link: "/cs/db/" }],
+    children: [
+      { text: "数据库理论", link: "/cs/db/" },
+      { text: "应用理论", link: "/cs/app/" },
+    ],
   },
   { text: "Others", link: "/others/" },
 ];
