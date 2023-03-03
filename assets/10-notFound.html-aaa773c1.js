@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-3beb68f2","path":"/web/go/gin/10-notFound.html","title":"404 页面","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/10-notFound.md"}');export{t as data};

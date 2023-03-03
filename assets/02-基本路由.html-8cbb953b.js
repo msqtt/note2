@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-25d521cc","path":"/web/go/gin/02-%E5%9F%BA%E6%9C%AC%E8%B7%AF%E7%94%B1.html","title":"基本路由","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/02-基本路由.md"}');export{t as data};

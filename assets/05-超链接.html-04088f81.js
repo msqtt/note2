@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-506e2fb5","path":"/web/html/05-%E8%B6%85%E9%93%BE%E6%8E%A5.html","title":"超链接","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/html/05-超链接.md"}');export{t as data};

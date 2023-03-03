@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-9bfc7bea","path":"/web/go/gin/04-API%E5%8F%82%E6%95%B0.html","title":"API 参数","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/04-API参数.md"}');export{t as data};

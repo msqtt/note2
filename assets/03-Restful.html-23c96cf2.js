@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-76931fe4","path":"/web/go/gin/03-Restful.html","title":"Restful 风格的 API","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/03-Restful.md"}');export{t as data};

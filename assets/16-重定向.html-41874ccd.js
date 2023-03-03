@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-05478648","path":"/web/go/gin/16-%E9%87%8D%E5%AE%9A%E5%90%91.html","title":"重定向","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/16-重定向.md"}');export{t as data};

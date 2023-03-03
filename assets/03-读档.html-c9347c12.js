@@ -1,0 +1,32 @@
+import{_ as e,p as a,q as s,a1 as n}from"./framework-7db056f4.js";const i={},t=n(`<h1 id="读档操作" tabindex="-1"><a class="header-anchor" href="#读档操作" aria-hidden="true">#</a> 读档操作</h1><p>就像你玩 RPG 游戏很菜一样，你写代码也很菜，总会出现数不清的 bug，因此必须在遇到 boss(重量级的 bug)前存档, 这一切都是为了快速地重新挑战，如果你没有存档，那就只能从头开始了 Orz</p><div class="custom-container warning"><p class="custom-container-title">WARNING</p><p>这个例子可能有点蠢，但是也说明了版本管理软件的优点之一。 时刻谨记，数据无价。</p></div><p>其实 commit 就是所谓的存档操作，接下来开始读档</p><h2 id="日志-存档点" tabindex="-1"><a class="header-anchor" href="#日志-存档点" aria-hidden="true">#</a> 日志(存档点)</h2><p>你的每一次 commit 都会产生一条 log，可以使用 <code>git log</code> 来查看所有的日志记录</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">git</span> log
+
+<span class="token comment">#commit 3269bdf6abb5ab1e60bf73ac5f564d31135a9a33 (HEAD -&gt; master)</span>
+<span class="token comment">#Author: mosqu1t0 &lt;mosquito@email.cn&gt;</span>
+<span class="token comment">#Date:   Sun Oct 23 21:13:30 2022 +0800</span>
+<span class="token comment">#</span>
+<span class="token comment">#    complete my readme</span>
+<span class="token comment">#</span>
+<span class="token comment">#commit ec1ed748d45e24b3272f355c9316d3d0905e44aa</span>
+<span class="token comment">#Author: mosqu1t0 &lt;mosquito@email.cn&gt;</span>
+<span class="token comment">#Date:   Sun Oct 23 20:33:15 2022 +0800</span>
+<span class="token comment">#</span>
+<span class="token comment">#    just commit a new file</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="head" tabindex="-1"><a class="header-anchor" href="#head" aria-hidden="true">#</a> HEAD</h2><p>你会发现一串奇怪的字母和符号 <code>HEAD -&gt; master</code>：</p><ul><li>HEAD 表示当前仓库所处于的版本(默认当然是最新的提交)</li><li>master 主分支</li></ul><blockquote><p>todo</p></blockquote><h2 id="reset" tabindex="-1"><a class="header-anchor" href="#reset" aria-hidden="true">#</a> Reset</h2><p>使用以下指令回退到某个版本</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">git</span> reset <span class="token parameter variable">--hard</span> <span class="token operator">&lt;</span>commit sha<span class="token operator">&gt;</span>
+
+<span class="token comment"># --hard 表示强制</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container danger"><p class="custom-container-title">DANGER</p><p>使用该指令的时候千万小心，它是真正的回退，是时光机那种回退，回退到的版本之后的版本都会消失！尽管还有办法恢复，但还是请小心。</p></div><p><code>&lt;commit sha&gt;</code>填写日志的 sha 值, 也可以使用 <code>HEAD^</code> 表示上一个版本</p><div class="custom-container tip"><p class="custom-container-title">TIP</p><p>理所当然，<code>HEAD^^</code> 表示上上个版本,写多少个<code>^</code>代表多少个上<br><code>HEAD^^^</code>可以简写成 <code>HEAD~3</code> 表示往上 3 个版本(倒数第 4 个版本)</p></div><h3 id="回滚版本" tabindex="-1"><a class="header-anchor" href="#回滚版本" aria-hidden="true">#</a> 回滚版本</h3><h4 id="及时的" tabindex="-1"><a class="header-anchor" href="#及时的" aria-hidden="true">#</a> 及时的</h4><p>假如你刚刚滚错，还没有关闭终端(还保存有上条 commit sha 值) 那么可以直接使用 <code>git reset --hard &lt;commit sha&gt;</code> 指令回到未来</p><h4 id="不及时" tabindex="-1"><a class="header-anchor" href="#不及时" aria-hidden="true">#</a> 不及时</h4><p>如果你已经已经完成工作下班，第二天才悲剧地发现回滚错误 orz</p><p>没关系，git 提供了后悔药吃</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">git</span> reflog
+
+<span class="token comment"># 查看每次操作的记录</span>
+
+<span class="token comment"># ec1ed74 (HEAD -&gt; master) HEAD@{0}: reset: moving to HEAD^^</span>
+<span class="token comment"># a11a2e6 HEAD@{1}: reset: moving to a11a</span>
+<span class="token comment"># 3269bdf HEAD@{2}: reset: moving to HEAD^</span>
+<span class="token comment"># a11a2e6 HEAD@{3}: reset: moving to a11a</span>
+<span class="token comment"># ec1ed74 (HEAD -&gt; master) HEAD@{4}: reset: moving to HEAD~2</span>
+<span class="token comment"># a11a2e6 HEAD@{5}: commit: again a commit</span>
+<span class="token comment"># 3269bdf HEAD@{6}: commit: complete my readme</span>
+<span class="token comment"># ec1ed74 (HEAD -&gt; master) HEAD@{7}: commit (initial): just commit a new file</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>再使用 <code>git reset --hard &lt;commit sha&gt;</code> 回去</p><div class="custom-container tip"><p class="custom-container-title">TIP</p><p>其实 reset 共有三种模式 <code>git reset --[soft,mixed,hard] &lt;commit sha&gt;</code><br> 但回退到的版本之后的版本日志都会消失, 区别只是是否会改动工作区文件和暂存区而已<br> 这反而导致只有 hard 是我最常用的(怪喔)</p></div><h3 id="回滚暂存区" tabindex="-1"><a class="header-anchor" href="#回滚暂存区" aria-hidden="true">#</a> 回滚暂存区</h3><p>让我们来看 reset 一个比较温柔的操作</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">git</span> reset HEAD <span class="token operator">&lt;</span>file<span class="token operator">&gt;</span>
+
+<span class="token comment"># 把暂存区中某文件的修改撤销</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>未 commit 前，可以把刚 add 的文件撤销掉</p><div class="custom-container tip"><p class="custom-container-title">TIP</p><p>你可能会发现使用<code>git status</code> 时，git 会提醒你可以使用 <code>git restore --staged &lt;file&gt;</code> 达到同样的效果(unstage)<br></p><p>如果你不小心更改了工作区的文件，<code>git status</code>时，git 还会提醒你可以使用 <code>git restore &lt;file&gt;</code> 把工作区的某文件的更改取消，恢复到暂存区中的状态</p></div>`,31),c=[t];function d(o,l){return a(),s("div",null,c)}const m=e(i,[["render",d],["__file","03-读档.html.vue"]]);export{m as default};

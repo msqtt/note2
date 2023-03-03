@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-4eb1674f","path":"/linux/web/","title":"Web 部署","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672899049000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"linux/web/README.md"}');export{e as data};

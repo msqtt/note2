@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-1bc903f2","path":"/web/go/gorm/21-%E9%80%9A%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8E%A5%E5%8F%A3.html","title":"通用数据库接口","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gorm/21-通用数据库接口.md"}');export{t as data};

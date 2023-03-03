@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-72069449","path":"/web/go/gin/25-log.html","title":"日志文件","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/25-log.md"}');export{t as data};

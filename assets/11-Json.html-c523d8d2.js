@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-7326ceba","path":"/web/go/gin/11-Json.html","title":"Json 数据解析和绑定","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/11-Json.md"}');export{t as data};

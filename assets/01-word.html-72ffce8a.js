@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-76e862d6","path":"/others/01-word.html","title":"The English words i forgot eazily 💩","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1675514435000,"contributors":[{"name":"mosquito","email":"mosquito@email.cn","commits":2}]},"filePathRelative":"others/01-word.md"}');export{t as data};
