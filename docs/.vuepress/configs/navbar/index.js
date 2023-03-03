@@ -27,4 +27,12 @@ export const navbar = [
     ],
   },
   { text: "Others", link: "/others/" },
+  {
+    text: "Bros",
+    children: [
+      { text: "LazyOnion", link: "https://lazyonion.github.io" },
+      { text: "Dr.M", link: "http://43.139.191.213/" },
+      { text: "Shadow-fy", link: "https://www.cnblogs.com/shadow-fy/" },
+    ],
+  },
 ];
