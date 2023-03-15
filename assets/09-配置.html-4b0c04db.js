@@ -1,0 +1,34 @@
+import{_ as i,M as c,p as l,q as t,R as e,t as a,N as o,a1 as s}from"./framework-7db056f4.js";const d={},r=s(`<h1 id="自定义" tabindex="-1"><a class="header-anchor" href="#自定义" aria-hidden="true">#</a> 自定义</h1><h2 id="配置" tabindex="-1"><a class="header-anchor" href="#配置" aria-hidden="true">#</a> 配置</h2><p>git 除了 可以配置<code>user.name</code> 和<code>user.email</code>, git 还有很多可以配置的选项</p><p>例如: 让 Git 显示颜色</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> color.ui <span class="token boolean">true</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>`,5),p={href:"https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-%E9%85%8D%E7%BD%AE-Git",target:"_blank",rel:"noopener noreferrer"},m=s(`<h2 id="配置别名" tabindex="-1"><a class="header-anchor" href="#配置别名" aria-hidden="true">#</a> 配置别名</h2><p>你是否觉得 git 的指令太长了, 经常敲错指令</p><p>可以给命令配置别名，例如：<code>git status</code> 可以用 <code>git st</code> 代替</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.st status
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>还有别的命令可以简写，很多人都用 co 表示 checkout，ci 表示 commit，br 表示 branch：</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.co checkout
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.ci commit
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.br branch
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container tip"><p class="custom-container-title">TIP</p><p><code>--global</code>参数是全局参数，也就是这些命令在这台电脑的所有 Git 仓库下都有用。</p></div><p>如果你很熟悉 <code>unix</code> 系统，那么你就会知道 <code>alias</code> 可以实现更多，例如：</p><p>使用命令<code>git reset HEAD file</code> 可以把暂存区的修改撤销掉(unstage)，那么我们可以配置成这样</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.unstage <span class="token string">&#39;reset HEAD&#39;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>就可以使用 <code>git unstage file</code> 来撤销修改辣</p><p>你也可以配置：</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.last <span class="token string">&#39;log -1&#39;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>就可以使用 <code>git last</code> 看到最后一次提交信息</p><p>甚至：</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.lg <span class="token string">&quot;log --color --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>使用 <code>git lg</code> 就可以看到多彩多样的 log 了</p><h2 id="配置文件" tabindex="-1"><a class="header-anchor" href="#配置文件" aria-hidden="true">#</a> 配置文件</h2><p>配置 git 的时候, 加上<code>--global</code> 是针对当前用户起作用的，如果不加, 那只对当前仓库起作用</p><p>每个仓库的配置文件放在<code>.git/config</code>中</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">cat</span> .git/config
+<span class="token comment"># [core]</span>
+<span class="token comment">#     repositoryformatversion = 0</span>
+<span class="token comment">#     filemode = true</span>
+<span class="token comment">#     bare = false</span>
+<span class="token comment">#     logallrefupdates = true</span>
+<span class="token comment">#     ignorecase = true</span>
+<span class="token comment">#     precomposeunicode = true</span>
+<span class="token comment"># [remote &quot;origin&quot;]</span>
+<span class="token comment">#     url = git@github.com:michaelliao/learngit.git</span>
+<span class="token comment">#     fetch = +refs/heads/*:refs/remotes/origin/*</span>
+<span class="token comment"># [branch &quot;master&quot;]</span>
+<span class="token comment">#     remote = origin</span>
+<span class="token comment">#     merge = refs/heads/master</span>
+<span class="token comment"># [alias]</span>
+<span class="token comment">#     last = log -1</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>别名就在<code>[alias]</code>后面，要删除别名，直接把对应的行删掉即可。</p><p>而当前用户的 Git 配置文件放在用户主目录下的一个隐藏文件<code>.gitconfig</code> 中：</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>$ <span class="token function">cat</span> .gitconfig
+<span class="token comment"># [alias]</span>
+<span class="token comment">#     co = checkout</span>
+<span class="token comment">#     ci = commit</span>
+<span class="token comment">#     br = branch</span>
+<span class="token comment">#     st = status</span>
+<span class="token comment"># [user]</span>
+<span class="token comment">#     name = Your Name</span>
+<span class="token comment">#     email = your@email.com</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>配置别名也可以直接修改这个文件，如果改错了，可以删掉文件重新通过命令配置。</p>`,25);function u(v,b){const n=c("ExternalLinkIcon");return l(),t("div",null,[r,e("p",null,[a("更多的配置文件："),e("a",p,[a("这里"),o(n)])]),m])}const h=i(d,[["render",u],["__file","09-配置.html.vue"]]);export{h as default};

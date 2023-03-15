@@ -1,0 +1,15 @@
+import{_ as n,p as s,q as a,a1 as e}from"./framework-7db056f4.js";const t={},c=e(`<h1 id="通用数据库接口" tabindex="-1"><a class="header-anchor" href="#通用数据库接口" aria-hidden="true">#</a> 通用数据库接口</h1><p>GORM 提供了从当前的 <code>*gorm.DB</code> 连接中返回通用的数据库接口的方法 <code>DB *sql.DB</code> 。</p><div class="language-go line-numbers-mode" data-ext="go"><pre class="language-go"><code><span class="token comment">// 获取通用数据库对象 sql.DB 来使用他的 db.DB() 方法</span>
+
+<span class="token comment">// Ping</span>
+db<span class="token punctuation">.</span><span class="token function">DB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Ping</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container warning"><p class="custom-container-title">WARNING</p><p>如果底层的数据库连接不是 <code>*sql.DB</code>。就像在事务中，它将返回 nil。</p></div><div class="language-go line-numbers-mode" data-ext="go"><pre class="language-go"><code>连接池
+<span class="token comment">// SetMaxIdleConns 设置空闲连接池中的最大连接数。</span>
+db<span class="token punctuation">.</span><span class="token function">DB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetMaxIdleConns</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+
+<span class="token comment">// SetMaxOpenConns 设置数据库连接最大打开数。</span>
+db<span class="token punctuation">.</span><span class="token function">DB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetMaxOpenConns</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+
+<span class="token comment">// SetConnMaxLifetime 设置可重用连接的最长时间</span>
+db<span class="token punctuation">.</span><span class="token function">DB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetConnMaxLifetime</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span>Hour<span class="token punctuation">)</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,5),o=[c];function p(i,l){return s(),a("div",null,o)}const d=n(t,[["render",p],["__file","21-通用数据库接口.html.vue"]]);export{d as default};

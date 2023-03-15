@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-5b94a7c6","path":"/web/go/gin/12-%E8%A1%A8%E5%8D%95.html","title":"表单数据解析和绑定","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/12-表单.md"}');export{t as data};

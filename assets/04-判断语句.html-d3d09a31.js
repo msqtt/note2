@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-27a34529","path":"/web/js/04-%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5.html","title":"判断语句","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/js/04-判断语句.md"}');export{t as data};

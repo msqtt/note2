@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-8b12845c","path":"/web/go/gin/09-routesGroup.html","title":"routes group","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/09-routesGroup.md"}');export{t as data};

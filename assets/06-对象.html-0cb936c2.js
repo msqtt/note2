@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-3aa5a15c","path":"/web/js/06-%E5%AF%B9%E8%B1%A1.html","title":"循环语句","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/js/06-对象.md"}');export{t as data};

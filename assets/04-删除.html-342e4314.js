@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-2335920e","path":"/linux/git/04-%E5%88%A0%E9%99%A4.html","title":"删除文件","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"linux/git/04-删除.md"}');export{t as data};

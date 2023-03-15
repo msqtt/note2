@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-779ae316","path":"/web/go/gin/05-URL%E5%8F%82%E6%95%B0.html","title":"URL 参数","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/05-URL参数.md"}');export{t as data};

@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-408b3b88","path":"/web/go/gin/18-%E5%85%A8%E5%B1%80%E4%B8%AD%E9%97%B4%E4%BB%B6.html","title":"全局中间件","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/18-全局中间件.md"}');export{t as data};

@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-f68032e8","path":"/web/go/gin/14-%E6%95%B0%E6%8D%AE%E6%B8%B2%E6%9F%93.html","title":"数据渲染","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1672896614000,"contributors":[{"name":"mosqu1t0","email":"mosquito@email.cn","commits":1}]},"filePathRelative":"web/go/gin/14-数据渲染.md"}');export{t as data};
