@@ -2,7 +2,7 @@ export const mysql = {
   "/web/database/mysql/": [
     {
       text: "基础使用",
-      collapsible: true,
+      collapsible: false,
       children: [
         "/web/database/mysql/01-sql",
         "/web/database/mysql/02-DDL",
@@ -14,8 +14,8 @@ export const mysql = {
         "/web/database/mysql/08-多表查询",
         "/web/database/mysql/09-事务",
         "/web/database/mysql/10-其他",
+        "/web/database/mysql/11-触发器",
       ],
     },
   ],
 };
-
