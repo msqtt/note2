@@ -14,6 +14,8 @@ export const mysql = {
         "/web/database/mysql/08-多表查询",
         "/web/database/mysql/09-事务",
         "/web/database/mysql/11-触发器",
+        "/web/database/mysql/12-视图",
+        "/web/database/mysql/13-存储过程",
         "/web/database/mysql/10-其他",
       ],
     },

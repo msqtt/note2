@@ -9,6 +9,8 @@ export const navbar = [
       { text: "Go", link: "/web/go/" },
       { text: "Java", link: "/web/java/" },
       { text: "Mysql", link: "/web/database/mysql/" },
+      { text: "Mariadb", link: "/web/database/mariadb/" },
+      { text: "Mongodb", link: "/web/database/mongodb/" },
     ],
   },
   {

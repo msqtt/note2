@@ -4,6 +4,8 @@ import { js } from "./js";
 import { go } from "./go";
 import { java } from "./java";
 import { mysql } from "./mysql";
+import { mariadb } from "./mariadb";
+import { mongodb } from "./mongodb";
 
 export const web = {
   ...html,
@@ -12,4 +14,6 @@ export const web = {
   ...go,
   ...java,
   ...mysql,
+  ...mariadb,
+  ...mongodb,
 };
