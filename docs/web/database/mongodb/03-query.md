@@ -210,7 +210,44 @@ db.inventory.find({ status: "A" }, { _id: 0 });
 
 ```javascript
 db.inventory.find({ status: "A" }, { item: 1, status: 1, "size.uom": 1 });
-
+// 只投影出size.uom 字段
 // 4.4 以后也可以这样写
 // { item: 1, status: 1, size: { uom: 1 } }.
+```
+
+### 投影特别的数组元素
+
+使用`$slice` 投影数组的指定位置元素
+
+```javascript
+db.inventory.find(
+  { status: "A" },
+  { item: 1, status: 1, instock: { $slice: -1 } }
+);
+
+// 不能使用下面的方法投影
+// ❌db.inventory.find({ status: "A" }, { item: 1, status: 1, "instock.0": 1 });
+```
+
+## 查询空字段和缺少字段
+
+### 等值查询
+
+```javascript
+db.inventory.find({ item: null });
+```
+
+### 类型检查
+
+```javascript
+db.inventory.find({ item: { $type: 10 } });
+// 查询 item 的类型是不是 10，10 在BSON 类型定义中为null
+// 详细查看: https://www.mongodb.com/docs/manual/reference/bson-types/
+```
+
+### 存在检查
+
+```javascript
+db.inventory.find({ item: { $exists: false } });
+// 检查 item 类型是否存在
 ```
