@@ -1,6 +1,5 @@
-export const app = [
-  {
-    text: "架构知识",
-    children: ["/cs/app/arch/01-架构"],
-  },
-];
+import { web } from "./web";
+import { arch } from "./arch";
+export const app = {
+  "/cs/app/": [...web, ...arch],
+};
