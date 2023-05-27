@@ -11,6 +11,7 @@ export const navbar = [
       { text: "Mysql", link: "/web/database/mysql/" },
       { text: "Mariadb", link: "/web/database/mariadb/" },
       { text: "Mongodb", link: "/web/database/mongodb/" },
+      { text: "Redis", link: "/web/database/redis/" },
     ],
   },
   {

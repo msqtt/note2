@@ -6,6 +6,7 @@ import { java } from "./java";
 import { mysql } from "./mysql";
 import { mariadb } from "./mariadb";
 import { mongodb } from "./mongodb";
+import { redis } from "./redis";
 
 export const web = {
   ...html,
@@ -16,4 +17,5 @@ export const web = {
   ...mysql,
   ...mariadb,
   ...mongodb,
+  ...redis,
 };

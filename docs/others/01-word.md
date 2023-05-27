@@ -81,3 +81,21 @@
 `per se`: 按照，本身是
 
 `on the fly`：及时，迅速
+
+`unhardened`：未加固的
+
+`directive`：指示、指令
+
+`exploit`：剥削
+
+`note`：请注意
+
+`bandwidth`：带宽
+
+`stick`：坚持
+
+`retrieve`：取回
+
+`assignment`：分配，赋值
+
+`serializable`：序列化，串行化
