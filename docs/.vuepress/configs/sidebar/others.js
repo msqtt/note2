@@ -8,5 +8,9 @@ export const others = {
       text: "Art",
       children: ["/others/02-lyrics"],
     },
+    {
+      text: "💩",
+      children: ["/others/03-shit"],
+    },
   ],
 };
