@@ -23,7 +23,7 @@ export default defineUserConfig({
     ],
   ],
   theme: defaultTheme({
-    repo: "msqtt/msqtt.github.io",
+    repo: "msqtt/note2",
     repoLabel: "Repo",
     docsBranch: "master",
     docsDir: "docs",
