@@ -2,8 +2,8 @@
 home: true
 title: 📖Mosquito's Note📖
 actions:
-  - text: 💩 Follow Me
-    link: https://github.com/msqtt
+  - text: 💩 Start to Read
+    link: https://note.msqt.fun/algorithm/
     type: primary
 features:
   - title: Algorithm ⚙️

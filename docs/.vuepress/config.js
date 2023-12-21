@@ -8,7 +8,7 @@ import { sidebar } from "./configs/sidebar";
 export default defineUserConfig({
   lang: "zh-CN",
   title: "📖Mosquito's Note📖",
-  description: "是水属性的答辩",
+  description: "是水属性的答辩笔记",
   head: [
     [
       "link",
